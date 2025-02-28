@@ -19,22 +19,12 @@ namespace Bai8_hinhtron_winform
 
         private void btnChuvi_Click(object sender, EventArgs e)
         {
-            double R,chuvi;
-            double PI = 3.14;
-            R = Convert.ToDouble(txtR.Text);
 
-            double p = R* PI;
-            txtKq.Text = p.ToString();
+
+            double R = double.Parse(txtR.Text);
+            lblKq.Text = "- Diện Tích " + dientich(R) + "\n - Chu VI :" + chuvi(R);
         }
-
-        private void btnDientich_Click(object sender, EventArgs e)
-        {
-            double R, dientich;
-            double PI = 3.14;
-            R = Convert.ToDouble(txtR.Text);
-
-            double s = R * R * PI;
-            txtKq.Text = s.ToString();
-        }
+        double chuvi(double R) { return R * R * 3.14; }
+        double dientich(double R) { return R * 3.14; }
     }
 }
